@@ -15,12 +15,12 @@ ret = subprocess.getoutput('date -u | wc')
 print(ret)
 
 # Список команд и аргументов:
-#ret = subprocess.check_output(['date', '-u'])
-#print(ret)
+ret = subprocess.check_output(['date', '-u'])
+print('subprocess.check_output',ret)
 
 # Получаем статус ответа, возвращаем кортеж (код_статуса, результат_работы):
 # 0 = успешное выполнение программы
-ret = subprocess.getstatusoutput('dir')
+ret = subprocess.getstatusoutput('date')
 print(ret)
 
 # Получаем только код статуса:
